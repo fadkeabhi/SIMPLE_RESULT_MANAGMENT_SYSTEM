@@ -12,7 +12,8 @@ $max_marks = array();
 
 
 //EXCEL START
-$inputFileName = '../Book1.xlsx';
+//$inputFileName = '../Book1.xlsx';
+$inputFileName = $uploadPath;
 
 $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
 $worksheet = $spreadsheet->getActiveSheet();
