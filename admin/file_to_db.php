@@ -20,12 +20,12 @@ $worksheet = $spreadsheet->getActiveSheet();
 
 $exam_name = $worksheet->getCellByColumnAndRow(2, 1)->getValue();
 
-for($i = 3; $i<= 7; $i++)
+for($i = 4; $i<= 8; $i++)
 {
     array_push($sub,$worksheet->getCellByColumnAndRow($i, 4)->getValue());
     array_push($max_marks,$worksheet->getCellByColumnAndRow($i, 3)->getValue());
-    echo $sub[$i-3];
-    echo $max_marks[$i-3];
+    echo $sub[$i-4];
+    echo $max_marks[$i-4];
 }
 
 $highestRow = $worksheet->getHighestRow();
@@ -60,27 +60,33 @@ if ($conn->query($sql) === TRUE) {
 
 
 
-$sql = "INSERT INTO marks (exam_id, stud_name, mother_name, m1, m2, m3, m4, m5)";
+$sql = "INSERT INTO marks (exam_id, seat_no, stud_name, mother_name, m1, m2, m3, m4, m5)";
 
 $data = array();
 
-for($i = 1; $i<= 7; $i++)
+for($i = 1; $i<= 8; $i++)
 {
     array_push($data,$worksheet->getCellByColumnAndRow($i, 5)->getValue());
 }
+$data[0] = strtolower($data[0]);
+$data[1] = strtolower($data[1]);
+$data[2] = strtolower($data[2]);
 
-$sql .= "SELECT '$exam_id','$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]' ";
+$sql .= "SELECT '$exam_id','$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]' ";
 
 
 
 for ($row = 6; $row <= $highestRow; ++$row) {
     $data = array();
-    for($i = 1; $i<= 7; $i++)
+    for($i = 1; $i<= 8; $i++)
     {
         array_push($data,$worksheet->getCellByColumnAndRow($i, $row)->getValue());
     }
+    $data[0] = strtolower($data[0]);
+    $data[1] = strtolower($data[1]);
+    $data[2] = strtolower($data[2]);
     $sql .= "  UNION ALL  ";
-    $sql .= "SELECT '$exam_id','$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]' ";
+    $sql .= "SELECT '$exam_id','$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]' ";
 }
 
 $sql .= ";";

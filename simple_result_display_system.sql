@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2023 at 02:41 PM
+-- Generation Time: Feb 23, 2023 at 09:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -58,7 +58,12 @@ INSERT INTO `exam_details` (`id`, `EXAM_NAME`, `S1`, `M1`, `S2`, `M2`, `S3`, `M3
 (10, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
 (11, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
 (12, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
-(13, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30);
+(13, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(14, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(15, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(16, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(17, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(18, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30);
 
 -- --------------------------------------------------------
 
@@ -69,6 +74,7 @@ INSERT INTO `exam_details` (`id`, `EXAM_NAME`, `S1`, `M1`, `S2`, `M2`, `S3`, `M3
 CREATE TABLE `marks` (
   `id` int(11) NOT NULL,
   `exam_id` int(11) NOT NULL,
+  `seat_no` tinytext NOT NULL,
   `stud_name` tinytext NOT NULL,
   `mother_name` tinytext NOT NULL,
   `m1` int(3) NOT NULL,
@@ -82,31 +88,39 @@ CREATE TABLE `marks` (
 -- Dumping data for table `marks`
 --
 
-INSERT INTO `marks` (`id`, `exam_id`, `stud_name`, `mother_name`, `m1`, `m2`, `m3`, `m4`, `m5`) VALUES
-(1, 11, '0', '0', 30, 25, 12, 25, 15),
-(2, 11, '0', '0', 30, 25, 12, 25, 15),
-(3, 11, '0', '0', 30, 25, 12, 25, 15),
-(4, 11, '0', '0', 30, 25, 12, 25, 15),
-(5, 11, '0', '0', 30, 25, 12, 25, 15),
-(6, 11, '0', '0', 30, 25, 12, 25, 15),
-(7, 11, '0', '0', 30, 25, 12, 25, 15),
-(8, 11, '0', '0', 30, 25, 12, 25, 15),
-(16, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(17, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(18, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(19, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(20, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(21, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(22, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(23, 12, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(31, 13, 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
-(32, 13, 'NAME 2', 'NAME 2', 23, 12, 16, 28, 9),
-(33, 13, 'NAME 3', 'NAME 3', 16, 23, 20, 24, 3),
-(34, 13, 'NAME 4', 'NAME 4', 9, 16, 24, 16, 4),
-(35, 13, 'NAME 5', 'NAME 5', 23, 9, 28, 20, 25),
-(36, 13, 'NAME 6', 'NAME 6', 9, 16, 16, 24, 16),
-(37, 13, 'NAME 7', 'NAME 7', 9, 20, 24, 16, 25),
-(38, 13, 'NAME 8', 'NAME 8', 23, 24, 15, 20, 30);
+INSERT INTO `marks` (`id`, `exam_id`, `seat_no`, `stud_name`, `mother_name`, `m1`, `m2`, `m3`, `m4`, `m5`) VALUES
+(61, 15, '', 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
+(62, 15, '', 'NAME 2', 'NAME 2', 23, 12, 16, 28, 9),
+(63, 15, '', 'NAME 3', 'NAME 3', 16, 23, 20, 24, 3),
+(64, 15, '', 'NAME 4', 'NAME 4', 9, 16, 24, 16, 4),
+(65, 15, '', 'NAME 5', 'NAME 5', 23, 9, 28, 20, 25),
+(66, 15, '', 'NAME 6', 'NAME 6', 9, 16, 16, 24, 16),
+(67, 15, '', 'NAME 7', 'NAME 7', 9, 20, 24, 16, 25),
+(68, 15, '', 'NAME 8', 'NAME 8', 23, 24, 15, 20, 30),
+(69, 16, 's1', 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
+(70, 16, 's2', 'NAME 2', 'NAME 2', 23, 12, 16, 28, 9),
+(71, 16, 's3', 'NAME 3', 'NAME 3', 16, 23, 20, 24, 3),
+(72, 16, 's4', 'NAME 4', 'NAME 4', 9, 16, 24, 16, 4),
+(73, 16, 's5', 'NAME 5', 'NAME 5', 23, 9, 28, 20, 25),
+(74, 16, 's6', 'NAME 6', 'NAME 6', 9, 16, 16, 24, 16),
+(75, 16, 's7', 'NAME 7', 'NAME 7', 9, 20, 24, 16, 25),
+(76, 16, 's8', 'NAME 8', 'NAME 8', 23, 24, 15, 20, 30),
+(84, 17, 's1', 'NAME 1', 'NAME 1', 30, 25, 12, 25, 15),
+(85, 17, 's2', 'NAME 2', 'NAME 2', 23, 12, 16, 28, 9),
+(86, 17, 's3', 'NAME 3', 'NAME 3', 16, 23, 20, 24, 3),
+(87, 17, 's4', 'NAME 4', 'NAME 4', 9, 16, 24, 16, 4),
+(88, 17, 's5', 'NAME 5', 'NAME 5', 23, 9, 28, 20, 25),
+(89, 17, 's6', 'NAME 6', 'NAME 6', 9, 16, 16, 24, 16),
+(90, 17, 's7', 'NAME 7', 'NAME 7', 9, 20, 24, 16, 25),
+(91, 17, 's8', 'NAME 8', 'NAME 8', 23, 24, 15, 20, 30),
+(99, 18, 's1', 'name 1', 'name 1', 30, 25, 12, 25, 15),
+(100, 18, 's2', 'name 2', 'name 2', 23, 12, 16, 28, 9),
+(101, 18, 's3', 'name 3', 'name 3', 16, 23, 20, 24, 3),
+(102, 18, 's4', 'name 4', 'name 4', 9, 16, 24, 16, 4),
+(103, 18, 's5', 'name 5', 'name 5', 23, 9, 28, 20, 25),
+(104, 18, 's6', 'name 6', 'name 6', 9, 16, 16, 24, 16),
+(105, 18, 's7', 'name 7', 'name 7', 9, 20, 24, 16, 25),
+(106, 18, 's8', 'name 8', 'name 8', 23, 24, 15, 20, 30);
 
 --
 -- Indexes for dumped tables
@@ -132,13 +146,13 @@ ALTER TABLE `marks`
 -- AUTO_INCREMENT for table `exam_details`
 --
 ALTER TABLE `exam_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
