@@ -54,17 +54,16 @@ if ($result->num_rows > 0)
 
     while($row1 = $result1->fetch_assoc())
     {
-		echo "STUDENT NAME : " . $row["stud_name"] . "<br>";
-		echo "MOTHERS NAME : " . $row["mother_name"] . "<br>";
-		echo "SEAT NO : " . $row["seat_no"] . "<br>";
-		echo "EXAM : " . $row1["EXAM_NAME"] . "<br>";
+      echo "STUDENT NAME : " . $row["stud_name"] . "<br>";
+      echo "MOTHERS NAME : " . $row["mother_name"] . "<br>";
+      echo "SEAT NO : " . $row["seat_no"] . "<br>";
+      echo "EXAM : " . $row1["EXAM_NAME"] . "<br>";
 
-		echo $row1["S1"] . " : ". $row["m1"] . "/" .  $row1["M1"] . "<br>";
-		echo $row1["S2"] . " : ". $row["m2"] . "/" .  $row1["M2"] . "<br>";
-		echo $row1["S3"] . " : ". $row["m3"] . "/" .  $row1["M3"] . "<br>";
-		echo $row1["S4"] . " : ". $row["m4"] . "/" .  $row1["M4"] . "<br>";
-		echo $row1["S5"] . " : ". $row["m5"] . "/" .  $row1["M5"] . "<br>";
-
+      echo $row1["S1"] . " : ". $row["m1"] . "/" .  $row1["M1"] . "<br>";
+      echo $row1["S2"] . " : ". $row["m2"] . "/" .  $row1["M2"] . "<br>";
+      echo $row1["S3"] . " : ". $row["m3"] . "/" .  $row1["M3"] . "<br>";
+      echo $row1["S4"] . " : ". $row["m4"] . "/" .  $row1["M4"] . "<br>";
+      echo $row1["S5"] . " : ". $row["m5"] . "/" .  $row1["M5"] . "<br>";
     }
 
 
