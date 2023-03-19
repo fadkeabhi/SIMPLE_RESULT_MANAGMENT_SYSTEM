@@ -1,5 +1,49 @@
-<form action="get_result.php" method="post">
-    <input name="seat">
-    <input name="mothername">
-    <input type="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginform.css">
+    <style>
+        h1{
+            background-color: rgb(108, 127, 74);
+            font-size: 50px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <form action="get_result.php" method="post">
+        <div class="imgcontainer">
+          <img src="I2IT.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+            <h2>****Check Result****</h2>
+          <label for="seatno"><b>Seat number:</b></label>
+          <input type="text" placeholder="Enter Seat number" name="seat" required>
+          
+      
+          <label for="psw"><b>Mother Name:</b></label>
+          <input type="text" placeholder="Enter Mother Name " name="mothername" required>
+        
+
+      
+          <button type="submit">Show</button>
+          
+            
+          
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="reset" class="cancelbtn">Cancel</button>
+          <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+      </form>
+    </div>
+    
+</body>
+</html>
