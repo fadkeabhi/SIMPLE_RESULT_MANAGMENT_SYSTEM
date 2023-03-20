@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:5px 5px ;
+    font-size: 17px;
+    padding: -10px;
+    border: 2px solid;
+    border-radius:10px ;
+    text-align: center;
+    font-size: 17px;
+}
+.avatar {
+    margin: -56px;
+    margin-top: auto;
+  }
