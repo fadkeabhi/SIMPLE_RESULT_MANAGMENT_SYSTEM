@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    $user = $_SESSION["username"];
+}
+else{
+    header("location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +43,7 @@ if (isset($_POST['submit'])) {
     $fileType = $_FILES['the_file']['type'];
     $fileExtension = strtolower(end(explode('.',$fileName)));
 
-    $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
+    $uploadPath = $currentDirectory . $uploadDirectory . time() . "_" . basename($fileName); 
 
 
 

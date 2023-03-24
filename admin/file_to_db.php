@@ -2,11 +2,14 @@
 /**
  * @var $conn mysqli
  */
+//avoid direct access
+ if(count(get_included_files()) ==1) exit("Direct access not permitted.");
+
 require '../vendor/autoload.php';
 
 include __DIR__ . '\..\db.php';
 
-$class = "test class";
+// $class = "test class";
 $sub = array();
 $max_marks = array();
 

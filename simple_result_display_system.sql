@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2023 at 09:36 AM
+-- Generation Time: Mar 24, 2023 at 01:53 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 -- Database: `simple_result_display_system`
 --
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+--  password = admin
 -- --------------------------------------------------------
 
 --
@@ -63,7 +83,9 @@ INSERT INTO `exam_details` (`id`, `EXAM_NAME`, `S1`, `M1`, `S2`, `M2`, `S3`, `M3
 (15, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
 (16, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
 (17, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
-(18, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30);
+(18, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(19, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30),
+(20, 'Enter Exam name here', 'SUB1', 30, 'SUB2', 30, 'SUB3', 30, 'SUB4', 30, 'SUB5', 30);
 
 -- --------------------------------------------------------
 
@@ -120,11 +142,34 @@ INSERT INTO `marks` (`id`, `exam_id`, `seat_no`, `stud_name`, `mother_name`, `m1
 (103, 18, 's5', 'name 5', 'name 5', 23, 9, 28, 20, 25),
 (104, 18, 's6', 'name 6', 'name 6', 9, 16, 16, 24, 16),
 (105, 18, 's7', 'name 7', 'name 7', 9, 20, 24, 16, 25),
-(106, 18, 's8', 'name 8', 'name 8', 23, 24, 15, 20, 30);
+(106, 18, 's8', 'name 8', 'name 8', 23, 24, 15, 20, 30),
+(107, 19, 's1', 'name 1', 'name 1', 30, 25, 12, 25, 15),
+(108, 19, 's2', 'name 2', 'name 2', 23, 12, 16, 28, 9),
+(109, 19, 's3', 'name 3', 'name 3', 16, 23, 20, 24, 3),
+(110, 19, 's4', 'name 4', 'name 4', 9, 16, 24, 16, 4),
+(111, 19, 's5', 'name 5', 'name 5', 23, 9, 28, 20, 25),
+(112, 19, 's6', 'name 6', 'name 6', 9, 16, 16, 24, 16),
+(113, 19, 's7', 'name 7', 'name 7', 9, 20, 24, 16, 25),
+(114, 19, 's8', 'name 8', 'name 8', 23, 24, 15, 20, 30),
+(122, 20, 's1', 'name 1', 'name 1', 30, 25, 12, 25, 15),
+(123, 20, 's2', 'name 2', 'name 2', 23, 12, 16, 28, 9),
+(124, 20, 's3', 'name 3', 'name 3', 16, 23, 20, 24, 3),
+(125, 20, 's4', 'name 4', 'name 4', 9, 16, 24, 16, 4),
+(126, 20, 's5', 'name 5', 'name 5', 23, 9, 28, 20, 25),
+(127, 20, 's6', 'name 6', 'name 6', 9, 16, 16, 24, 16),
+(128, 20, 's7', 'name 7', 'name 7', 9, 20, 24, 16, 25),
+(129, 20, 's8', 'name 8', 'name 8', 23, 24, 15, 20, 30);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `exam_details`
@@ -143,16 +188,22 @@ ALTER TABLE `marks`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `exam_details`
 --
 ALTER TABLE `exam_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
