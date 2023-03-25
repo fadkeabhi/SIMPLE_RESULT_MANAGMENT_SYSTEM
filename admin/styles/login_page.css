@@ -1,0 +1,55 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:15px 30px ;
+    font-size: 17px;
+    padding: 50px 5px;
+    border: 2px solid;
+    border-radius:10px ;
+    text-align: center;
+    font-size: 17px;
+    /*  */
+}
+button[type="submit"] {   
+    background-color: #13882c;   
+    width: 100px;  
+     color: white;   
+     padding: 10px;   
+     margin: 10px 0px;   
+     border: none;   
+     cursor: pointer;   
+      }   
+
+button[type="reset"] {   
+    background-color: #8d1c1c;   
+    width: 100px;  
+     color: white;   
+     padding: 10px;   
+     margin: 10px 0px;   
+     border: none;   
+     cursor: pointer;   
+      }   
+/* form {   
+     border: 3px solid #f1f1f1;   
+ }    */
+input[type=text], input[type=password] {   
+     width: 150px;   
+     margin: 8px 0;  
+     padding: 6px 10px;   
+     display: inline-block;   
+     border: 2px solid black;   
+     box-sizing: border-box;   
+ }  
+button:hover {   
+     opacity: 0.7;   
+ }   
+.cancelbtn {   
+     width: auto;   
+     padding: 10px 18px;  
+     margin: 10px 5px;  
+ }   
+     
+  
+.container {   
+     padding: 30px;   
+     /* background-color: lightblue;   */
+ }   
