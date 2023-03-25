@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
+  <title>I2IT RESULT</title>
   <link rel="stylesheet" href="./styles/loginform.css">
   <style>
     h1 {
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <form action="get_result_new.php" method="post">
+  <form action="result.php" method="post">
     <div class="imgcontainer">
       <img src="I2IT.png" alt="Avatar" class="avatar">
     </div>

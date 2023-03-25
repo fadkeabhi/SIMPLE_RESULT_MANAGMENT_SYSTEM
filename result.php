@@ -67,7 +67,7 @@ if ($result->num_rows > 0)
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styles/resultshow.css">
-  <title>I2IT RESULTS</title>
+  <title>I2IT RESULT</title>
 </head>
 <style>
   table,
@@ -101,9 +101,9 @@ if ($result->num_rows > 0)
 
       
       <center>
-        <label>Student Name : <?php echo $row["stud_name"] ?></label><br>
-        <label>Mother Name : <?php echo $row["mother_name"] ?></label><br>
-        <label>Seat Number : <?php echo $row["seat_no"] ?></label>
+        <label>Student Name : <?php echo strtoupper($row["stud_name"]) ?></label><br>
+        <label>Mother Name : <?php echo strtoupper($row["mother_name"]) ?></label><br>
+        <label>Seat Number : <?php echo strtoupper($row["seat_no"]) ?></label>
       </center>
       <br>
       </div>

@@ -13,7 +13,7 @@ else{
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PHP File Upload</title>
+    <title>UPLOAD RESULT</title>
 </head>
 <body>
     <form action="" method="post" enctype="multipart/form-data">
