@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    $user = $_SESSION["username"];
+    require("file_upload_html.php");
 }
 else{
     header("location: login.php");
@@ -9,8 +9,3 @@ else{
 
 ?>
 
-
-LOGGED IN
-
-<a href="logout.php">LOGOUT</a>
-<a href="upload.php">UPLOAD NEW EXAM DATA</a>

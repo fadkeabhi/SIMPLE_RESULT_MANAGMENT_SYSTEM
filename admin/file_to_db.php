@@ -27,8 +27,8 @@ for($i = 4; $i<= 8; $i++)
 {
     array_push($sub,$worksheet->getCellByColumnAndRow($i, 4)->getValue());
     array_push($max_marks,$worksheet->getCellByColumnAndRow($i, 3)->getValue());
-    echo $sub[$i-4];
-    echo $max_marks[$i-4];
+    // echo $sub[$i-4];
+    // echo $max_marks[$i-4];
 }
 
 $highestRow = $worksheet->getHighestRow();
@@ -36,7 +36,7 @@ $highestColumn = $worksheet->getHighestColumn();
 $highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
 
 
-echo '<table border>' . "\n";
+echo '<link rel="stylesheet" href="styles/upload.css"><table class="content-table">' . "\n";
 for ($row = 4; $row <= $highestRow; ++$row) {
     echo '<tr>' . PHP_EOL;
     for ($col = 1; $col <= $highestColumnIndex; ++$col) {
@@ -55,7 +55,7 @@ VALUES ('$exam_name', '$sub[0]', '$max_marks[0]', '$sub[1]', '$max_marks[1]', '$
 
 if ($conn->query($sql) === TRUE) {
     $exam_id = $conn->insert_id;
-  echo "New record created successfully, id = " . $exam_id;
+  // echo "New record created successfully, id = " . $exam_id;
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
   exit();
@@ -96,8 +96,11 @@ $sql .= ";";
 
 
 if ($conn->query($sql) === TRUE) {
-  echo "ALL MARKS UPLOADED SUCCESFULLY";
+  echo "<center>ALL MARKS UPLOADED SUCCESFULLY<center>";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
   exit();
 }
+?>
+
+<a  href="./"><button class="close">Close</button></a>

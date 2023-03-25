@@ -7,24 +7,8 @@ else{
     header("location: login.php");
 }
 
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>UPLOAD RESULT</title>
-</head>
-<body>
-    <form action="" method="post" enctype="multipart/form-data">
-        Upload a File:
-        <input type="file" name="the_file" id="fileToUpload">
-        <input type="submit" name="submit" value="Start Upload">
-    </form>
-</body>
-</html>
 
-<?php
 if (isset($_POST['submit'])) {
     $currentDirectory = getcwd();
     $uploadDirectory = "/uploads/";
@@ -48,7 +32,7 @@ if (isset($_POST['submit'])) {
 
 
       if (! in_array($fileExtension,$fileExtensionsAllowed)) {
-        $errors[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+        $errors[] = "This file extension is not allowed. Please upload a xlsx file";
       }
 
       if ($fileSize > 4000000) {
@@ -59,7 +43,7 @@ if (isset($_POST['submit'])) {
         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
         if ($didUpload) {
-          echo "The file " . basename($fileName) . " has been uploaded";
+          echo "<center>The file " . basename($fileName) . " has been uploaded</center>";
         } else {
           echo "An error occurred. Please contact the administrator.";
         }

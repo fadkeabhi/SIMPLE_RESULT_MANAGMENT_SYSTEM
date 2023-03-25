@@ -83,7 +83,7 @@ if ($result->num_rows > 0)
 
 
     <!-- <div class="imgcontainer"> -->
-    <img src="I2IT.png" alt="Avatar" class="avatar" width="50%">
+    <img src="I2IT.png" alt="Avatar" class="avatar" width="300px">
     <!-- </div> -->
     <div id="objek">
       <center><br>
