@@ -53,3 +53,10 @@ button:hover {
      padding: 30px;   
      /* background-color: lightblue;   */
  }   
+
+ .error{
+    color: #8d1c1c;
+    max-width: fit-content;
+    background-color:yellow;
+    /* text-align: center; */
+ }
