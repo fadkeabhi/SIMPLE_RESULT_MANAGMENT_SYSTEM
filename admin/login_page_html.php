@@ -11,10 +11,16 @@
 <body>
 
     <center> <h1> ADMIN LOGIN</h1> </center>   
-    <form>  
+    <form method="POST">
         
         <div class="container">  
-          <center><h4 class="error">Invalid Credentials</h4> </center>  
+        <?php     
+            if(!empty($err)){  ?>
+        <center><h4 class="error">
+         <?php     echo $err;  ?>
+         </h4> </center>
+         <?php  }  ?>
+ 
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
             <br>

@@ -54,8 +54,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     
 }
+
+require("./login_page_html.php");
 ?>
 
+
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,4 +84,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
     
 </body>
-</html>
+</html> -->

@@ -16,12 +16,12 @@
 </head>
 
 <body>
+  <div class="imgcontainer">
+    <img src="I2IT.png" alt="Avatar" class="avatar">
+  </div>
   <form action="result.php" method="post">
-    <div class="imgcontainer">
-      <img src="I2IT.png" alt="Avatar" class="avatar">
-    </div>
     <div class="container">
-      <h2>****Check Result****</h2>
+      <h2>Check Result</h2>
 <?php
   session_start();
 
@@ -42,12 +42,30 @@
       <label for="psw"><b>Mother Name:</b></label>
       <input type="text" placeholder="Enter Mother Name " name="mothername" value="<?php if(isset($_SESSION["mothername"])){echo $_SESSION["mothername"];}  unset($_SESSION["seatno"]); unset($_SESSION["mothername"]); ?>" required>
       <button type="submit">Show</button>
+      <br/>
+      <button type="reset" class="cancelbtn">Reset</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="reset" class="cancelbtn">Reset</button>
       <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
     </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+
+    <?php
+      include 'db.php';
+      $sql = "SELECT note FROM notes ORDER BY id DESC LIMIT 1";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) 
+      {
+        while($row = $result->fetch_assoc()) 
+        {
+          echo html_entity_decode($row["note"]);
+        }
+      }
+
+    ?>
+      </div>
   </form>
   </div>
 
