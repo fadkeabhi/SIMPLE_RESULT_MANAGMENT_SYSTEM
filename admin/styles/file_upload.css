@@ -3,12 +3,13 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:15px 30px ;
     font-size: 17px;
-    padding: 15px;
+    padding: 10px;
     border: 2px solid;
     border-radius:10px ;
     text-align: center;
     font-size: 20px;
     margin-top: 50px;
+    font-style: unset;
 }
 h2{
    text-decoration: auto; 
@@ -34,6 +35,20 @@ input[type="submit"]{
 
 }
 
+button{
+    background-color: #7e13f8;
+    color: white;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+
+}
+
 a{
     font-size: small;
+}
+.container{
+    border: 1px;
 }
