@@ -7,7 +7,8 @@
 
 require '../vendor/autoload.php';
 
-include __DIR__ . '\..\db.php';
+// include __DIR__ . '\..\db.php';
+require '../db.php';
 
 // $class = "test class";
 $sub = array();
