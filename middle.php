@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Exam</title>
+    <link rel="stylesheet" 
+    type="text/css" href="./styles/middle.css?">
+</head>
+<body>
+
+
 <?php
 
 session_start();
@@ -61,7 +74,8 @@ if ($result->num_rows > 0)
     {
 
       ?>   
-        <a href="./result.php?eid=<?php echo $temp?>"> <?php echo $row1["EXAM_NAME"] ?> </a>
+      
+        <a href="./result.php?eid=<?php echo $temp?>" style="--clr:#1e9dff"><span> <?php echo $row1["EXAM_NAME"] ?>  </span></a>
       <?php
     }
   }
@@ -72,3 +86,7 @@ if ($result->num_rows > 0)
   $_SESSION["mothername"] = $mother_name;
   header("location: index.php");
 }
+?>
+
+</body>
+</html>

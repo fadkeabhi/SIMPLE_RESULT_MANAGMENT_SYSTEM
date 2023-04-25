@@ -41,64 +41,31 @@ if ($result->num_rows > 0)
     {
 
       ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="styles/resultshow.css">
-  <title>I2IT RESULT</title>
-</head>
-<style>
-  table,
-  th,
-  td {
-    border: 1px solid black;
-    text-align: center;
-  }
-</style>
-
-<body>
-  <center>
-
-
-    <!-- <div class="imgcontainer"> -->
-    <img src="I2IT.png" alt="Avatar" class="avatar" width="300px">
-    <!-- </div> -->
-    <div id="objek">
-      <center><br>
-        <h2 style="margin-top: 3px;">***Result***<br></h2>
-      </center>
-      <hr style="width:85%;margin-top:-10px">
-
-
-
-
-      <br>
-      <center>
-        <h3 style="margin-top: 3px;"> <?php echo $row1["EXAM_NAME"] ?> </h3>
-      </center>
-
-      
-      <center>
-        <label>Student Name : <?php echo strtoupper($row["stud_name"]) ?></label><br>
-        <label>Mother Name : <?php echo strtoupper($row["mother_name"]) ?></label><br>
-        <label>Seat Number : <?php echo strtoupper($row["seat_no"]) ?></label>
-      </center>
-      <br>
-      </div>
-
-
-      <center>
-      <table style="width:60%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="./styles/resultshow.css?" />
+  </head>
+  <body>
+    <div class="head">
+      <div class="class-child"><h1><?php echo $row1["EXAM_NAME"] ?></h1></div>
+      <div class="class-child"><h3>Student Name : <span> <?php echo strtoupper($row["stud_name"]) ?> </span></h3></div>
+      <div class="class-child"><h3>Mothers Name : <span> <?php echo strtoupper($row["mother_name"]) ?> </span></h3></div>
+      <div class="class-child"><h3>Seat Number : <span> <?php echo strtoupper($row["seat_no"]) ?> </span></h3></div>
+    </div>
+    <table class="content-table">
+      <thead>
         <tr>
           <th>Subject</th>
           <th>Marks</th>
           <th>Out of</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><?php echo $row1["S1"] ?></td>
           <td><?php echo $row["m1"] ?></td>
@@ -124,10 +91,8 @@ if ($result->num_rows > 0)
           <td><?php echo $row["m5"] ?></td>
           <td><?php echo $row1["M5"] ?></td>
         </tr>
-      </table>
-
-    </center>
-    </div>
+      </tbody>
+    </table>
 
     <p align="center">
 
@@ -143,17 +108,22 @@ if ($result->num_rows > 0)
       }
     </script>
 
-  </center>
-</body>
+<!--     
+    <div class="head">
+    <input TYPE="button" onClick="window.print()" class="print-but" value="Print Result">
+  </div> -->
+  </body>
 </html>
-      
-      <?php
-    }
-  }
+
+ 
+<?php
+}
+}
 } else 
 {
-  $_SESSION["error"] = "Invalid Information";
-  $_SESSION["seatno"] = $seat_no;
-  $_SESSION["mothername"] = $mother_name;
-  header("location: index.php");
+$_SESSION["error"] = "Invalid Information";
+$_SESSION["seatno"] = $seat_no;
+$_SESSION["mothername"] = $mother_name;
+header("location: index.php");
 }
+?>
