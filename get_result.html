@@ -1,5 +1,37 @@
-<form action="get_result.php" method="post">
-    <input name="seat">
-    <input name="mothername">
-    <input type="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Box</title>
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <img src="I²IT-Logo-New (1).png" alt="#" class="container" />
+    </div>
+    <div class="exam">
+      <p>Exam Results</p>
+    </div>
+    <div>
+      <p>Error message</p>
+    </div>
+    <form action="get_result.php" method="post">
+      <div class="inputBox">
+        <input type="text" required="required" name="seat" />
+        <span>Seat Number</span>
+      </div>
+      <div class="inputBox">
+        <input type="text" required="required" name="mothername" />
+        <span>Mother's Name</span>
+      </div>
+      <div>
+        <input type="submit" value="Submit" class="submission" />
+        <input type="reset" value="Re-enter" class="submission" />
+      </div>
+    </form>
+    <h3 class="note">Note: Enter your Roll number as SA01</h3>
+  </body>
+</html>
+
