@@ -19,7 +19,7 @@
   <div class="imgcontainer">
     <img src="I2IT.png" alt="Avatar" class="avatar">
   </div>
-  <form action="result.php" method="post">
+  <form action="middle.php" method="post">
     <div class="container">
       <h2>Check Result</h2>
 <?php
