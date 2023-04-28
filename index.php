@@ -22,7 +22,7 @@
     {
       ?>
     <div class="error">
-      <p>Error message</p>
+    <?php echo $_SESSION["error"]; ?>
     </div>
     <?php
     unset($_SESSION["error"]);
@@ -44,7 +44,7 @@
         <input type="reset" value="Re-enter" class="submission" />
       </div>
     </form>
-    <h3 class="note">
+    <div class="note">
 
       <?php
       include 'db.php';
@@ -60,7 +60,7 @@
 
     ?>
 
-    </h3>
+    </div>
   </body>
 </html>
 
