@@ -28,6 +28,7 @@ a
     font-weight: 400;
     padding: 10px 30px;
     transition: 0.25s;
+    margin: 20px;
 }
 a:hover 
 {
